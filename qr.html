@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARNING!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+        body {
+            font-family: 'VT323', monospace;
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+            color: red;
+            position: relative;
+            overflow: auto;
+        }
+        .glitch {
+            font-size: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: glitch 1s infinite;
+            margin-bottom: 20px;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 4px 4px red; }
+            50% { text-shadow: -4px -4px white; }
+            100% { text-shadow: 4px 4px red; }
+        }
+        .alert-box {
+            font-size: 22px;
+            background: red;
+            color: white;
+            padding: 15px;
+            display: block;
+            border-radius: 10px;
+            margin: 10px auto;
+            width: 80%;
+            max-width: 400px;
+        }
+        .screen-flicker {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 0, 0, 0.1);
+            animation: flicker 0.2s infinite;
+            pointer-events: none;
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 0.1; }
+            50% { opacity: 0.3; }
+        }
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            left: 0;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+        }
+        .real-life-incidents {
+            background: black;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            font-size: 24px;
+        }
+        .glitch-warning {
+            font-size: 36px;
+            animation: glitch 1s infinite;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+        /* Make the text and layout more responsive */
+        @media screen and (max-width: 768px) {
+            .glitch {
+                font-size: 40px;
+            }
+            .alert-box {
+                font-size: 18px;
+                width: 90%;
+            }
+            .real-life-incidents {
+                font-size: 20px;
+                padding: 15px;
+            }
+            .glitch-warning {
+                font-size: 28px;
+            }
+            .footer {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .glitch {
+                font-size: 30px;
+            }
+            .alert-box {
+                font-size: 16px;
+                width: 95%;
+            }
+            .real-life-incidents {
+                font-size: 18px;
+                padding: 10px;
+            }
+            .glitch-warning {
+                font-size: 24px;
+            }
+            .footer {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="screen-flicker"></div>
+    <h1 class="glitch">⚠️ WARNING! ⚠️</h1>
+    <p class="alert-box">Oops! You just scanned a random QR code... and now, we hope you like surprises! 😱</p>
+    <p class="alert-box">But wait... this could be a hacker’s ticket to your private data! 📱💀</p>
+    <p class="alert-box"> He can see your private photos, including those cringy, ‘no one can ever see this’ pics of you and your secret crush. 📱😳</p>
+    <p class="alert-box">Moral of the story: QR codes are like mystery boxes—cool but risky! 🚀</p>
+    
+    <div class="real-life-incidents">
+        <h2 class="glitch-warning">Real-Life QR Code Scanning Incidents</h2>
+        <p>In 2021, hackers used QR codes to steal personal data from unsuspecting victims in a series of attacks. One incident involved a scam where QR codes were placed on ATM machines. When scanned, they redirected victims to fake websites that collected their bank login details.</p>
+        <p>Another case occurred in a popular shopping mall where a malicious QR code redirected users to a page that downloaded malware onto their phones, allowing hackers to track personal information and access sensitive data.</p>
+        <p>These incidents highlight the risks of scanning unverified QR codes. Always verify the source of a QR code before scanning!</p>
+    </div>
+
+    <div class="footer">
+        <span>Daffodil International University - Department OF CIS - Batch 20(B)</span>
+    </div>
+</body>
+</html>
